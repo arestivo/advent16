@@ -1,0 +1,13 @@
+[package]
+name = "day10"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+global = {path = "../global"}
+
+[[bin]]
+name = "day10a"
+
+[[bin]]
+name = "day10b"

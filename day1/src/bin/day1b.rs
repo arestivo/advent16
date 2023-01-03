@@ -16,7 +16,7 @@ fn closest_crossing(steps: &[Step]) -> i32 {
   visited.insert(santa.location.clone());
 
   for s in steps {
-    let locations = santa.step_locations(&s);
+    let locations = santa.step_locations(s);
 
     for location in locations {
       if visited.contains(&location) {

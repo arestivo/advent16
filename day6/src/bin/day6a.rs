@@ -1,4 +1,4 @@
-use std::collections::HashMap;
+use std::collections::{HashMap, hash_map::Entry};
 
 fn main() {
   let lines = global::read_lines();
@@ -8,8 +8,8 @@ fn main() {
   for line in &lines {
     for (i, c) in line.char_indices() {
       match counts[i].entry(c) {
-          std::collections::hash_map::Entry::Occupied(mut e) => { e.insert(e.get() + 1); }
-          std::collections::hash_map::Entry::Vacant(e) => { e.insert(1); }
+          Entry::Occupied(mut e) => { e.insert(e.get() + 1); }
+          Entry::Vacant(e) => { e.insert(1); }
       }
     }
   }

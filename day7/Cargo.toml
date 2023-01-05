@@ -5,6 +5,7 @@ edition = "2021"
 
 [dependencies]
 global = {path = "../global"}
+fancy-regex = "0.10.0"
 
 [[bin]]
 name = "day7a"
